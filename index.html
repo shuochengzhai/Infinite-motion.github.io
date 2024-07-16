@@ -2,155 +2,135 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description"
-        content="HyperNeRF handles topological variations by modeling a family of shapes in a higher-dimensional space, thereby producing more realistic renderings and more accurate geometric reconstructions.">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <!-- <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/> -->
+
+
+  <meta name="twitter:title" content="Infinite Motion">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
   <meta name="keywords" content="Infinite Motion">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:image" content="./static/images/thumbnail.png"/>
-  <link rel="image_src" href="./static/images/thumbnail.png">
-  <link rel="icon"
-        type="image/x-icon"
-        href="./static/images/favicon.ico"/>
+
 
   <title>Infinite Motion: Extended Motion Generation via Long Text Instructions</title>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDF010G6PN"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-EDF010G6PN');
-
-
-  </script>
-
-  <script type="module"
-          src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
-
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  rel="stylesheet">
 
-  <link rel="stylesheet" type="text/css" href="./static/slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="./static/slick/slick-theme.css"/>
-
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
 
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="https://kit.fontawesome.com/d383128d10.js" crossorigin="anonymous"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
 </head>
+
 <body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <div class="container has-text-centered">
+          <h1 class="title is-1 publication-title limited-width">
+            Infinite Motion: Extended Motion Generation via Long Text Instructions
+          </h1>
+          <div class="is-size-6 publication-authors">
+            <div class="author-block">
+              <span class="author-name">Mengtian Li</span><sup>1,2,4</sup>,
+              <span class="author-name">Chengshuo Zhai</span><sup>1</sup>,
+              <span class="author-name">Shengxiang Yao</span><sup>1</sup>,
+              <span class="author-name">Zhifeng Xie</span><sup>1,2</sup><sup>*</sup>,
+              <span class="author-name">Keyu Chen</span><sup>3</sup><sup>*</sup>,
+              <span class="author-name">Yu-Gang Jiang</span><sup>4</sup>,
+          </div>
+  
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>*</sup>Corresponding author</span>
+          </div>
+  
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>1</sup>Shanghai University,</span>
+            <span class="author-block"><sup>2</sup>Shanghai Engineering Research Center of Motion Picture Special Effects,</Label></span>
+            <span class="author-block"><sup>3</sup>Tavus Inc.,</span>
+            <span class="author-block"><sup>4</sup>Fudan University,</span>
+          </div>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="">
-            Infinite Motion
-          </a>
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav>
-
-
-<section class="hero">
-  <div class="hero-body">
-    <div class="container">
-      <div class="container has-text-centered">
-        <h1 class="title is-1 publication-title limited-width">
-          Infinite Motion: Extended Motion Generation via Long Text Instructions
-        </h1>
-        <div class="is-size-5 publication-authors">
-          <div class="author-block">
-            <span class="author-name">Mengtian Li</span><sup>1,2,4</sup>,
-            <span class="author-name">Chengshuo Zhai</span><sup>1</sup>,
-            <span class="author-name">Shengxiang Yao</span><sup>1</sup>,
-            <span class="author-name">Zhifeng Xie</span><sup>1,2</sup><sup>*</sup>,
-            <span class="author-name">Keyu Chen</span><sup>3</sup><sup>*</sup>,
-            <span class="author-name">Yu-Gang Jiang</span><sup>4</sup>,
-        </div>
-
-        <div class="is-size-5 publication-authors">
-          <span class="author-block"><sup>*</sup>Corresponding author</span>
-        </div>
-
-        <div class="is-size-5 publication-authors">
-          <span class="author-block"><sup>1</sup>Shanghai University,</span>
-          <span class="author-block"><sup>2</sup>Shanghai Engineering Research Center of Motion Picture Special Effects,</Label></span>
-          <span class="author-block"><sup>3</sup>Tavus Inc.,</span>
-          <span class="author-block"><sup>4</sup>Fudan University,</span>
-        </div>
-
-        <div class="column has-text-centered">
-          <div class="publication-links">
-            <!-- PDF Link. -->
-            <span class="link-block">
-                <a href="https://arxiv.org/pdf/2407.08443"
-                   class="external-link button is-normal is-rounded is-dark">
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Arxiv PDF link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2407.08443" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
+                    <i class="fas fa-file-pdf"></i>
                   </span>
                   <span>Paper</span>
                 </a>
               </span>
-            <span class="link-block">
-                <a href="https://arxiv.org/abs/2407.08443"
-                   class="external-link button is-normal is-rounded is-dark">
+
+              <!-- ArXiv abstract Link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2407.08443" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="ai ai-arxiv"></i>
+                    <i class="ai ai-arxiv"></i>
                   </span>
                   <span>arXiv</span>
                 </a>
-            </span>
-            <span class="link-block">
-              <a href="https://github.com/shuochengzhai/Infinite-Motion"
-                 class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                    <i class="fab fa-github"></i>
-                </span>
-                <span>Code</span>
-                </a>
-            </span>
+              </span>
 
-            <div class="image-container has-text-centered">
-              <img src="pic/fig1.png" alt="Your Image Description">
+
+              <!-- Code link -->
+              <span class="link-block">
+                <a href="https://github.com/shuochengzhai/Infinite-Motion" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+
+              <!-- Data link -->
+              <span class="link-block">
+                <a href="https://github.com/shuochengzhai/HumanML3D-Extend" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa-solid fa-download"></i>
+                  </span>
+                  <span>Data</span>
+                </a>
+              </span>
+
+            
+
+              <div class="image-container has-text-centered">
+                <img src="pic/fig1.png" alt="Your Image Description">
+              </div>
+              <h2 class="subtitle has-text-justified">
+                We have proposed a novel method for generating infinite motions, based on the timestamps featured in our HumanML3D-Extend dataset. This approach not only enables the generation of extremely long motions but also facilitates precise control over actions within specific time intervals.
+              </h2>
+              
             </div>
-            <h2 class="subtitle has-text-justified">
-              We have proposed a novel method for generating infinite motions, based on the timestamps featured in our HumanML3D-Extend dataset. This approach not only enables the generation of extremely long motions but also facilitates precise control over actions within specific time intervals.
-            </h2>
           </div>
         </div>
       </div>
@@ -158,241 +138,315 @@
   </div>
 </section>
 
-<section class="container has-text-centered">
-  <video width="640" height="360" controls>
-    <source src="pic/demo.mp4" type="video/mp4">
-  </video>
-</section>
 
-
-<section class="section" id="Abstract">
-  <div class="container content is-max-desktop">
-    <h2 class="title has-text-justified">Abstract</h2>
-    <p>In the realm of motion generation, the creation of long-duration, high-quality motion sequences remains a significant challenge. This paper presents our groundbreaking work on "Infinite Motion", a novel approach that leverages long text to extended motion generation, effectively bridging the gap between short and long-duration motion synthesis. Our core insight is the strategic extension and reassembly of existing high-quality text-motion datasets, which has led to the creation of a novel benchmark dataset to facilitate the training of models for extended motion sequences. A key innovation of our model is its ability to accept arbitrary lengths of text as input, enabling the generation of motion sequences tailored to specific narratives or scenarios. Furthermore, we incorporate the timestamp design for text which allows precise editing of local segments within the generated sequences, offering unparalleled control and flexibility in motion synthesis. We further demonstrate the versatility and practical utility of "Infinite Motion" through three specific applications: natural language interactive editing, motion sequence editing within long sequences and splicing of independent motion sequences. Each application highlights the adaptability of our approach and broadens the spectrum of possibilities for research and development in motion generation. Through extensive experiments, we demonstrate the superior performance of our model in generating long sequence motions compared to existing methods.
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="item has-text-centered">
+      <div class="has-text-centered">
+        <!-- <h2 class="title is-3">Video</h2> -->
+        <video width="640" height="360" controls>
+        <source src="pic/demo.mp4" type="video/mp4">
+     </video>
+    </div>
+  </div>
   </div>
 </section>
 
-<section class="section" id="Framework">
-  <div class="container content is-max-desktop">
-    <h2 class="title has-text-justified">Framework</h2>
-    <img src="pic/pipeline.png">
-    <p>Infinite Motion Pipeline: Our model consists of two stages. In Stage I, the model undergoes a diffusion process in the latent space, generating multiple segments of short motion sequences simultaneously. In Stage II, the timestamp stitcher concatenates these short motion segments to form an infinite sequence of motions.
-  </div>
-</section>
-
-
-<section class="hero teaser">
+<!-- Paper abstract -->
+<section class="hero is-small">
   <div class="hero-body">
     <div class="container is-max-desktop">
-
-      <h2 class="subtitle has-text-centered">
-
-      </h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              In the realm of motion generation, the creation of long-duration, high-quality motion sequences remains a significant challenge. This paper presents our groundbreaking work on "Infinite Motion", a novel approach that leverages long text to extended motion generation, effectively bridging the gap between short and long-duration motion synthesis. Our core insight is the strategic extension and reassembly of existing high-quality text-motion datasets, which has led to the creation of a novel benchmark dataset to facilitate the training of models for extended motion sequences. A key innovation of our model is its ability to accept arbitrary lengths of text as input, enabling the generation of motion sequences tailored to specific narratives or scenarios. Furthermore, we incorporate the timestamp design for text which allows precise editing of local segments within the generated sequences, offering unparalleled control and flexibility in motion synthesis. We further demonstrate the versatility and practical utility of "Infinite Motion" through three specific applications: natural language interactive editing, motion sequence editing within long sequences and splicing of independent motion sequences. Each application highlights the adaptability of our approach and broadens the spectrum of possibilities for research and development in motion generation. Through extensive experiments, we demonstrate the superior performance of our model in generating long sequence motions compared to existing methods.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+<!-- End paper abstract -->
 
-<!-- <section class="columns is-centered has-text-centered">
+<!-- Paper abstract -->
+<section class="hero is-small is-light">
   <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Dataset</h2>
-      <div id="results-carousel11" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-       
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Method</h2>
+          <div class="content has-text-justified">
+            <img src="pic/pipeline.png"/>
+            <p>
+              Infinite Motion Pipeline: Our model consists of two stages. In Stage I, the model undergoes a diffusion process in the latent space, generating multiple segments of short motion sequences simultaneously. In Stage II, the timestamp stitcher concatenates these short motion segments to form an infinite sequence of motions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Teaser demo-->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div id="teaser-demo" class="container is-max-desktop">
+      <div class="has-text-centered">
+        <h2 class="title is-3">HumanML3D-Extend dataset</h2>
+        <!-- <h2 class="subtitle"><sup>*</sup>Drag mouse to rotate & scroll wheel to zoom in/out</h2> -->
+      </div>
+      <div class="carousel demo-carousel">
+        <div class="item has-text-centered">
+          <video poster="" id="video7" autoplay controls muted loop height="75%" width="75%">\
             <source src="./pic/dataset/1.mkv"
             type="video/mp4">
           </video>
+          <h2 class="subtitle has-text-centered">
+            <!-- A Motion clip from TRUMANS dataset in a bedroom. -->
+          </h2>
         </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-           
+
+        <div class="item has-text-centered">
+          <video poster="" id="video7" autoplay controls muted loop height="75%" width="75%">\
             <source src="./pic/dataset/2.mkv"
             type="video/mp4">
           </video>
+          <h2 class="subtitle has-text-centered">
+            <!-- A Motion clip from TRUMANS dataset in a living room. -->
+          </h2>
         </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            
+
+        <div class="item has-text-centered">
+          <video poster="" id="video7" autoplay controls muted loop height="75%" width="75%">\
             <source src="./pic/dataset/3.mkv"
             type="video/mp4">
           </video>
+          <h2 class="subtitle has-text-centered">
+            <!-- A Motion clip from TRUMANS dataset in a kitchen. -->
+          </h2>
         </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            
+
+        <div class="item has-text-centered">
+          <video poster="" id="video7" autoplay controls muted loop height="75%" width="75%">\
             <source src="./pic/dataset/4.mkv"
             type="video/mp4">
           </video>
+          <h2 class="subtitle has-text-centered">
+            <!-- A Motion clip from TRUMANS dataset in a kitchen. -->
+          </h2>
         </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            
+
+        <div class="item has-text-centered">
+          <video poster="" id="video7" autoplay controls muted loop height="75%" width="75%">\
             <source src="./pic/dataset/5.mkv"
             type="video/mp4">
           </video>
+          <h2 class="subtitle has-text-centered">
+            <!-- A Motion clip from TRUMANS dataset in a kitchen. -->
+          </h2>
         </div>
+
       </div>
     </div>
   </div>
-</section> -->
+</section>
+<!-- End teaser demo -->
 
-<div class="columns is-centered has-text-centered">
-    <h2 class="title is-3">Dataset</h2>
-</div>     
+
+<!-- Video carousel -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="has-text-centered">
+        <h2 class="title is-3">Demos</h2>
+      </div>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <div class="item has-text-centered">
+            <video poster="" id="video8" autoplay controls muted loop height="75%" width="75%">
+              <source src="./pic/demo1.mp4"
+              type="video/mp4">
+            </video>
+            <!-- <h1 class="title is-4">Replaceable objects</h1> -->
+          </div>
+        </div>
+        <div class="item item-video2">
+          <div class="item has-text-centered">
+            <video poster="" id="video9" autoplay controls muted loop height="75%" width="75%">
+              <source src="./pic/demo2.mp4"
+              type="video/mp4">
+            </video>
+            <!-- <h1 class="title is-4">Replaceable background</h1> -->
+          </div>
+        </div>
+        <div class="item item-video3">
+          <div class="item has-text-centered">
+            <video poster="" id="video10" autoplay controls muted loop height="75%" width="75%">
+              <source src="./pic/demo3.mp4"
+              type="video/mp4">
+            </video>
+            <!-- <h1 class="title is-4">Extensive annotations</h1> -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+<!-- Teaser demo-->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container has-text-centered">
-      <div id="results-carousel" class="carousel results-carousel">
-
-        <div class="video-container">
-          <video controls width="50%" height="50%">
-            <source src="./pic/dataset/1.mkv" type="video/mp4">
-            <p>Your browser does not support the video tag.
-          </video>
-        </div>
-        <div class="video-container">
-          <video controls width="50%" height="50%">
-            <source src="./pic/dataset/2.mkv" type="video/mp4">
-            <p>Your browser does not support the video tag.
-          </video>
-        </div>
-        <div class="video-container">
-          <video controls width="50%" height="50%">
-            <source src="./pic/dataset/3.mkv" type="video/mp4">
-            <p>Your browser does not support the video tag.
-          </video>
-        </div>
-        <div class="video-container">
-          <video controls width="50%" height="50%">
-            <source src="./pic/dataset/4.mkv" type="video/mp4">
-            <p>Your browser does not support the video tag.
-          </video>
-        </div>
-
-        <div class="video-container">
-          <video controls width="50%" height="50%">
-            <source src="./pic/dataset/5.mkv" type="video/mp4">
-            <p>Your browser does not support the video tag.
-          </video>
-        </div>
+    <div id="teaser-demo" class="container is-max-desktop">
+      <div class="has-text-centered">
+        <h2 class="title is-3">Edit</h2>
+        <!-- <h2 class="subtitle"><sup>*</sup>Drag mouse to rotate & scroll wheel to zoom in/out</h2> -->
       </div>
-
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-three-quarters">
-          <p>
-
-          </p>
+      <div class="carousel demo-carousel">
+        <div class="item has-text-centered">
+          <video poster="" id="video7" autoplay controls muted loop height="75%" width="75%">\
+            <source src="./pic/app/add.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            edit-add
+          </h2>
         </div>
+
+        <div class="item has-text-centered">
+          <video poster="" id="video7" autoplay controls muted loop height="75%" width="75%">\
+            <source src="./pic/app/replace.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            edit-replace
+          </h2>
+        </div>
+
+        <div class="item has-text-centered">
+          <video poster="" id="video7" autoplay controls muted loop height="75%" width="75%">\
+            <source src="./pic/demo4.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            long-duration
+          </h2>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
+<!-- End teaser demo -->
 
 
-<div class="columns is-centered has-text-centered">
-  <h2 class="title is-3">Demons</h2>
-</div>     
-<section class="hero is-dark is-small">
-<div class="hero-body">
-  <div class="container has-text-centered">
-    <div id="results-carousel" class="carousel results-carousel">
-
-      <div class="video-container">
-        <video controls width="50%" height="50%">
-          <source src="./pic/demo1.mp4" type="video/mp4">
-          <p>Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="video-container">
-        <video controls width="50%" height="50%">
-          <source src="./pic/demo2.mp4" type="video/mp4">
-          <p>Your browser does not support the video tag.
-        </video>
-      </div>
-      <div class="video-container">
-        <video controls width="50%" height="50%">
-          <source src="./pic/demo3.mp4" type="video/mp4">
-          <p>Your browser does not support the video tag.
-        </video>
-      </div>
-    </div>
 
 
-    <div class="video-container">
-      <h2 class="title is-3">edit-add</h2>
-      <video controls width="50%" height="50%">
-        <source src="./pic/app/add.mp4" type="video/mp4">
-        <p>Your browser does not support the video tag.
-      </video>
-    </div>
-    <div class="video-container">
-      <h2 class="title is-3">edit-replace</h2>
-      <video controls width="50%" height="50%">
-        <source src="./pic/app/replace.mp4" type="video/mp4">
-        <p>Your browser does not support the video tag.
-      </video>
-    </div>
+<!-- Image carousel -->
+<!--<section class="hero is-small">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      <div id="results-carousel" class="carousel results-carousel">-->
+<!--       <div class="item">-->
+<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
+<!--        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>-->
+<!--        <h2 class="subtitle has-text-centered">-->
+<!--          First image description.-->
+<!--        </h2>-->
+<!--      </div>-->
+<!--      <div class="item">-->
+<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
+<!--        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>-->
+<!--        <h2 class="subtitle has-text-centered">-->
+<!--          Second image description.-->
+<!--        </h2>-->
+<!--      </div>-->
+<!--      <div class="item">-->
+<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
+<!--        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>-->
+<!--        <h2 class="subtitle has-text-centered">-->
+<!--         Third image description.-->
+<!--       </h2>-->
+<!--     </div>-->
+<!--     <div class="item">-->
+<!--      &lt;!&ndash; Your image here &ndash;&gt;-->
+<!--      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>-->
+<!--      <h2 class="subtitle has-text-centered">-->
+<!--        Fourth image description.-->
+<!--      </h2>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</section>-->
+<!-- End image carousel -->
 
-    <div class="video-container">
-      <h2 class="title is-3">long-duration</h2>
-      <video controls width="50%" height="50%">
-        <source src="./pic/demo4.mp4" type="video/mp4">
-        <p>Your browser does not support the video tag.
-      </video>
-    </div>
-    
 
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-three-quarters">
-        <p>
+<!-- Youtube video -->
+<!--<section class="hero is-small is-light">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      &lt;!&ndash; Paper video. &ndash;&gt;-->
+<!--      <h2 class="title is-3">Video Presentation</h2>-->
+<!--      <div class="columns is-centered has-text-centered">-->
+<!--        <div class="column is-four-fifths">-->
+<!--          -->
+<!--          <div class="publication-video">-->
+<!--            &lt;!&ndash; Youtube embed code here &ndash;&gt;-->
+<!--            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<!-- End youtube video -->
 
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
+
+<!-- Paper poster -->
+<!--<section class="hero is-small is-light">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      <h2 class="title">Poster</h2>-->
+
+<!--      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">-->
+<!--          </iframe>-->
+<!--        -->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<!--End paper poster -->
 
 
-<hr/>
-
+<!--BibTex citation -->
 <section class="section" id="BibTeX">
-  <div class="container content id-max-desktop">
-    <h2 class="title">BibTeX</h2>
-    <pre>
-      <code>
-        @inproceedings{Li2024InfiniteME,
-          title={Infinite Motion: Extended Motion Generation via Long Text Instructions},
-          author={Mengtian Li and Chengshuo Zhai and Shengxiang Yao and Zhifeng Xie and Keyu Chen and Yu-Gang Jiang},
-          year={2024},
-          url={https://api.semanticscholar.org/CorpusID:271097653}
-        }
-      </code>
-    </pre>
+  <div class="container is-max-desktop content">
+    <div class="has-text-centered">
+      <h2 class="title is-3">BibTeX</h2>
+    </div>
+    <pre><code>
+      @inproceedings{Li2024InfiniteME,
+        title={Infinite Motion: Extended Motion Generation via Long Text Instructions},
+        author={Mengtian Li and Chengshuo Zhai and Shengxiang Yao and Zhifeng Xie and Keyu Chen and Yu-Gang Jiang},
+        year={2024},
+        url={https://api.semanticscholar.org/CorpusID:271097653}
+      }</code></pre>
   </div>
 </section>
-
-<hr/>
-
-</section>
-
-
-<!-- <section class="section" id="acknowledgements">
-  <div class="container content is-max-desktop">
-    <h2 class="title">Acknowledgements</h2>
-    <p>Special thanks to <a href="https://github.com/hypernerf/hypernerf.github.io">HyperNeRF</a>
-  </div>
-</section> -->
-
+<!--End BibTex citation -->
 
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <a class="icon-link" href="">
+      <a class="icon-link" href="https://arxiv.org/pdf/2407.08443">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/shuochengzhai/Infinite-Motion" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
